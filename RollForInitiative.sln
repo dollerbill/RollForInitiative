@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFI_UI", "RFI_UI\RFI_UI.csproj", "{D085DA3D-AC4C-4E8E-A6FD-E97BF44FCB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFI_Engine", "RFI_Engine\RFI_Engine.csproj", "{474EA8D8-7AB5-4788-8E5D-BAB553BAFED8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D085DA3D-AC4C-4E8E-A6FD-E97BF44FCB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D085DA3D-AC4C-4E8E-A6FD-E97BF44FCB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D085DA3D-AC4C-4E8E-A6FD-E97BF44FCB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D085DA3D-AC4C-4E8E-A6FD-E97BF44FCB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474EA8D8-7AB5-4788-8E5D-BAB553BAFED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474EA8D8-7AB5-4788-8E5D-BAB553BAFED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474EA8D8-7AB5-4788-8E5D-BAB553BAFED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474EA8D8-7AB5-4788-8E5D-BAB553BAFED8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88897CD7-9127-4A51-8ACE-699F29E79AD2}
+	EndGlobalSection
+EndGlobal
