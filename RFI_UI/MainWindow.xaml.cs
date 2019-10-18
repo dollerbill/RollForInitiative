@@ -25,8 +25,15 @@ namespace RFI_UI
         public MainWindow()
         {
             InitializeComponent();
+
             _gameSession = new GameSession();
+
             DataContext = _gameSession;
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            _gameSession.CurrentPlayer.Experience = _gameSession.CurrentPlayer.Experience + 10;
         }
     }
 }
