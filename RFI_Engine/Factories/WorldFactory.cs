@@ -44,6 +44,9 @@ namespace RFI_Engine.Factories
                 "You see a small hut, with plants drying from the roof.",
                 "/RFI_Engine;component/Images/Locations/HerbalistsHut.png");
 
+            newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestByID(1));
+
+
             newWorld.AddLocation(0, 2, "Herbalist's garden",
                 "There are many plants here, with snakes hiding behind them.",
                 "/RFI_Engine;component/Images/Locations/HerbalistsGarden.png");

@@ -29,6 +29,19 @@ namespace RFI_Engine.Factories
                 rewardItems));
         }
 
+        //The way I would do it is to add code like this:
+
+        //_quests.Add(new Quest(2,
+        //    "Clear the farmer's field",
+        //    "Defeat the rats that are in the Farmer's field",
+        //new List {new ItemQuantity(9003, 5)},
+        //25, 10,
+        //new List {new ItemQuantity(1001, 1)}));
+
+        //This will create the quest without using the temporary variables “itemsToComplete” and “rewardItems”.
+        //Your parameters are completely new lists, with the items you want for the quest.
+        //This is safer than trying to re-use the temporary variables.
+
         internal static Quest GetQuestByID(int id)
         {
             return _quests.FirstOrDefault(quest => quest.ID == id);
