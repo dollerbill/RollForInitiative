@@ -17,7 +17,7 @@ namespace RFI_Engine.Models
             loc.YCoordinate = yCoordinate;
             loc.Name = name;
             loc.Description = description;
-            loc.Image= image;
+            loc.Image= $"/RFI_Engine;component/Images/Locations/{image}";
 
             _locations.Add(loc);
         }

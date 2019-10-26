@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RFI_Engine.Models;
+﻿using System.Collections.ObjectModel;
 
 namespace RFI_Engine.Models
 {
@@ -15,32 +9,37 @@ namespace RFI_Engine.Models
         public string Name { get; private set; }
         public string Image { get; set; }
         public int MaximumHitPoints { get; private set; }
-
         public int HitPoints
         {
             get { return _hitPoints; }
-            private set
+            set
             {
                 _hitPoints = value;
                 OnPropertyChanged(nameof(HitPoints));
             }
         }
+        public int MinimumDamage { get; set; }
+        public int MaximumDamage { get; set; }
 
         public int RewardExperience { get; private set; }
         public int RewardGold { get; private set; }
 
         public ObservableCollection<ItemQuantity> Inventory { get; set; }
 
-        public Monster(string name, string image, int maximumHitPoints, int hitPoints,
+        public Monster(string name, string image,
+            int maximumHitPoints, int hitPoints,
+            int minimumDamage, int maximumDamage,
             int rewardExperience, int rewardGold)
         {
             Name = name;
-            Image = string.Format("/RFI_Engine;component/Images/Monsters/{0}", image);
+            Image = string.Format($"/RFI_Engine;component/Images/Monsters/{image}");
             MaximumHitPoints = maximumHitPoints;
             HitPoints = hitPoints;
+            MinimumDamage = minimumDamage;
+            MaximumDamage = maximumDamage;
             RewardExperience = rewardExperience;
             RewardGold = rewardGold;
-            
+
             Inventory = new ObservableCollection<ItemQuantity>();
         }
     }
