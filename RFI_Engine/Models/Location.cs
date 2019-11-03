@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RFI_Engine.Factories;
 
 namespace RFI_Engine.Models
@@ -17,6 +14,8 @@ namespace RFI_Engine.Models
         public List<Quest> QuestsAvailableHere { get; set; } = new List<Quest>();
 
         public List<MonsterEncounter> MonstersHere { get; set; } = new List<MonsterEncounter>();
+
+        public Trader TraderHere { get; set; }
 
         public void AddMonster(int monsterID, int chanceOfEncounter)
         {

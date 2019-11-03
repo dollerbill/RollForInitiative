@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.CodeDom;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -83,6 +84,7 @@ namespace RFI_Engine.Models
         public ObservableCollection<QuestStatus> Quests { get; set; }
 
         #endregion
+
         public Player()
         {
             Inventory = new ObservableCollection<GameItem>();
@@ -93,6 +95,26 @@ namespace RFI_Engine.Models
         {
             Inventory.Add(item);
             OnPropertyChanged(nameof(Weapons));
+        }
+
+        public void RemoveItemFromInventory(GameItem item)
+        {
+            Inventory.Remove(item);
+
+            OnPropertyChanged(nameof(Weapons));
+        }
+
+        public bool HasAllQuestItems(List<ItemQuantity> items)
+        {
+            foreach (ItemQuantity item in items)
+            {
+                if (Inventory.Count(i => i.ItemTypeID == item.ItemID) < item.Quantity)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
